@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style> *{padding: 0; margin: 0;}</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <title>Cart Shopping</title>
+</head>
+<body style="max-width: 1000px; border: 1px solid black; margin: auto; background-color:whitesmoke;">
+  <header style="background-color:lightgrey; border-bottom: 1px solid black;">
+    <nav style="display: flex; padding: 10px; border-bottom: 1px solid black;"> 
+      <ul style=" display: flex; list-style-type: none; gap: 10px; margin-right: 20px ;">
+        <li>
+          <a style="text-decoration: none; color:black; " href="" ><b>ammartech.com</b></a>
+        </li>
+      </ul>
+
+      <ul style=" display: flex; list-style-type: none; gap: 10px;"> 
+        <li> 
+          <a style="text-decoration: none; color:black;" href="/">Beranda</a> |
+        </li> 
+        <li> 
+          <a style="text-decoration: none; color:black;" href="/events">Events</a> |
+        </li> 
+        <li> 
+          <a style="text-decoration: none; color:black;" href="/contact">Kontak Kami</a>
+        </li> 
+      </ul> 
+      <ul style=" display: flex; list-style-type: none; gap: 10px; margin-left: auto;">
+        <li>
+          <i class="bi bi-search"></i>
+        </li>
+        <li style="display: flex; gap: 5px;">
+          <i class="bi bi-cart-fill"></i>
+         <p>Cart(1)</p>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <div style="display: flex; gap: 20px; margin-top: 100px; padding: 10px;">
+<main style="width: 60%;">
+  
+<div>
+    <table>
+        <tbody>
+            <td class="kiri" style="width: 30%;">
+                <table>
+                <img src="data:image/jpeg;base64,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" alt="Gambar Laptop" width="200"><br>
+                <input type="submit" value="Upload Foto">
+                 </table>
+            </td>
+            <td class="kanan" style="width: 70%;">
+                <table>
+                    <tr>
+                        <td>Title Here</td>
+                        <td>:</td>
+                        <td><div>
+                            <input type="text" name="tittle-here">
+                          </div></td>
+                    </tr>
+                    <tr>
+                        <td>Desciption</td>
+                        <td>:</td>
+                        <td> <textarea maxlength="400" placeholder="No more than 400 characters long" id="input-delivery-instruction" name="instructions" cols="30" rows="10" ></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Account Number</td>
+                        <td>:</td>
+                        <td> <input type="text" name="tittle-here"></td>
+                    </tr>
+                    <tr>
+                        <td>Bank</td>
+                        <td>:</td>
+                        <td><div>
+                            <select id="how-transaction" name="bank">
+                              <option value="BRI">BRI</option>
+                              <option value="BNI">BNI</option>
+                              <option value="BCA">BCA</option>
+                              <option value="Mandiri">Mandiri</option>
+                              <option value="BSI">BSI</option>
+                              <option value="Mega">Mega</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Account Holder</td>
+                        <td>:</td>
+                        <td> <input type="text" name="tittle-here"></td>
+                    </tr>
+                    <tr>
+                        <td>Transaction</td>
+                        <td>:</td>
+                        <td><div><br>
+                            <select id="how-many-order" name="order">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                            <br>*if the transaction is for 3 person, choose 3 for drop down list
+                        </td>
+                    </tr>
+                    <td></td>
+                    <td></td>
+                    <td> <div>
+                        <input id="phone" type="checkbox" >
+                        <label for="phone">send to mobile phone</label>
+                      </div>
+                      <div>
+                        <input id="email" type="checkbox" >
+                        <label for="email">send to email</label>
+                      </div></td>
+                      <tr>
+                          <td>Sent to mobile phone</td>
+                          <td>:</td>
+                          <td><input type="text" name="tittle-here"></td>
+                      </tr>
+                      <tr>
+                        <tr>
+                            <td>Sent to email</td>
+                            <td>:</td>
+                            <td><input type="text" name="tittle-here"></td>
+                        </tr>
+                      </tr>
+                </table>
+                <br>
+                <input type="submit" value="Generate nabr link" style="margin-left: 20px;">
+            </td>
+        </tbody>
+    </table>
+</div>
+</div>
+ 
+
+</main>
+    </div>
+    <footer style="margin-top: 100px; border-top: 1px solid black; background-color:lightgrey; padding: 10px; display: grid; gap: 10px;">
+        <div style="display: flex; gap: 5px;">
+          <a style="text-decoration: none; margin-right: 20px;color:black;"  href=""><b>ammartech.com</b></a>
+          <a style="text-decoration: none; margin-right: 5px;color:black;"  href="">Paket 1</a> |
+          <a style="text-decoration: none; margin-right: 5px;color:black;"  href="">Paket 2</a> |
+          <a style="text-decoration: none; margin-right: 5px;color:black;"  href="">Paket 3</a> 
+          <a style="text-decoration: none; margin-left: auto;color:black;"  href="">Stay In Touch</a>
+        </div>
+        <div style="gap: 5px;">
+          <i class="bi bi-credit-card-2-front"></i>
+          <i class="bi bi-credit-card"></i>
+          <i class="bi bi-wallet2"></i>
+          <div style="display: flex;">
+            <input style="margin-left: auto; font-weight: bolder;" type="text" placeholder="Enter Email">
+            <p style="background-color: #E6E6E6; font-weight: bolder;"><button>Subscribe<button></p>
+          </div>
+        </div>
+</footer>
+
+</body>

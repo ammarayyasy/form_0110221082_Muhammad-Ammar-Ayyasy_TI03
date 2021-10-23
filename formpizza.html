@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Form Pemesanan Pizza</title>
+ <meta charset="UTF-8">
+ </head>
+ <body bgcolor="beige" text="black">
+  <main>
+    <form action="http://blackgoosebistro.com/pizza.php" method="POST">
+     <h1 style="font-size: 22px;">Pizza Ammar Jaya | Formulir Pemesanan</h1>
+     <p>Kami sekarang mempunyai fitur baru yaitu pemesanan pizza dapat melewati web! Bangun "pizza dream" dream anda dari rumah kapan saja dan dimana saja. </p>
+     <fieldset>
+        <legend><h2>Your Infomation</h2></legend>
+   
+                <table style="border: 1px solid white;">
+                   
+                    <tr>
+                        <td><label for="input-name">Nama</label> </td>
+                        <td>: <input id="input-name" type="text" name="customername"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="input-address">Alamat</label> </td>
+                        <td>: <input id="input-address" type="text" name="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="input-telephone">Nomor Telpon</label> </td>
+                        <td>: <input id="input-telephone" type="text" name="telephone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="input-email">Email</label> </td>
+                        <td>: <input id="input-email" type="text" name="email"></td>
+                    </tr>
+                </table>
+                <br>
+                <label for="input-delivery-instruction">Delivery Instruction:</label>
+                <br>
+                <textarea maxlength="400" placeholder="tidak lebih dari 400 karakter" id="input-delivery-instruction" name="instructions" cols="30" rows="10" ></textarea>            
+           </fieldset>
+
+     <h3>Buat Pizza Impianmu</h3>
+     <h4>Bahan Roti (pilih salah satu):</h4>
+     
+     <div>
+        <input id="original" type="radio" name="crust" value="original">
+        <label for="original">roti original</label>
+      </div>
+      <div>
+        <input id="banyak-biji" type="radio" name="crust" value="banyak biji">
+        <label for="banyak-biji">roti banyak biji-bijian</label>
+      </div> 
+      <div>
+        <input id="isi-keju" type="radio" name="crust" value="isi keju">
+        <label for="isi-keju">roti isi keju</label>
+      </div>
+      <div>
+        <input id="tanpa-gula" type="radio" name="crust" value="tanpa gula">
+        <label for="tanpa-gula">roti tanpa gula</label>
+      </div> 
+              
+     <h4>Toppings (pilih sebanyak yang kamu mau):</h4>
+     
+     <div>
+        <input id="red-sauce" type="checkbox" name="toppings[]" value="Red Sauce" >
+        <label for="red-sauce">Red Sauce</label>
+      </div>
+      <div>
+        <input id="white-sauce" type="checkbox" name="toppings[]" value="White Sauce">
+        <label for="white-sauce">White Sauce</label>
+      </div>    
+      <div>
+        <input id="mozarella" type="checkbox" name="toppings[]" value="Keju Mozarella" >
+        <label for="mozarella">Keju Mozarella</label>
+      </div>
+      <div>
+        <input id="pepperoni" type="checkbox" name="toppings[]" value="Pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+      </div>
+      <div>
+        <input id="jamur" type="checkbox" name="toppings[]" value="Jamur">
+        <label for="jamur">Jamur</label>
+      </div>    
+      <div>
+        <input id="paprika" type="checkbox" name="toppings[]" value="Paprika" >
+        <label for="paprika">Paprika</label>
+      </div>
+      <div>
+        <input id="spesial" type="checkbox" name="toppings[]" value="Special Ammar's Pizza">
+        <label for="spesial">Special Ammar's Pizza</label>
+      </div>
+      <div>
+        <label for="banyak"><b>Banyaknya pizza:</b> </label>
+        <select id="banyak" name="pizzas">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">5</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+     <p><input type="submit" value="Pesan"> <input type="reset"></p>
+    </form>
+  </main>
+</body>
+</html>
